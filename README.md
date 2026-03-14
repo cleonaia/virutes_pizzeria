@@ -1,1 +1,3 @@
-# Propuesta de web para el local de Virutes Focaccia, donde podemos ofrecer herramientas digitales extendiendo el negocio a más rentabilidad
+# virutes_pizzeria
+
+Propuesta de web para el local de Virutes Focaccia, con herramientas digitales para extender el negocio y mejorar la rentabilidad.
