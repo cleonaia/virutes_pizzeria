@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Arriba la tardor i amb ella els bolets, les castayes i els sabors càlids. Descobreix les novetats de la nostra carta per a aquesta estació.",
     content: `
-La tardor és l'estació que més ens inspira a Virutes. Els bolets del Montseny, les castayes de l'Alt Berguedà, els naps i els carbassons... tot arriba al nostre forn amb una energia especial.
+La tardor és l'estació que més ens inspira a Alfajorina. Els bolets del Montseny, les castanyes de l'Alt Berguedà, els naps i els carbassons... tot arriba al nostre forn amb una energia especial.
 
 **Novetats de la carta:**
 
@@ -44,7 +44,7 @@ Vine a provar-ho! La carta canvia cada temporada perquè mengem el que la terra 
     content: `
 La focaccia té els seus orígens a la Ligúria, la regió italiana banyada pel mar Mediterrani. Els genovesos ja la preparaven fa més de dos mil anys, i la recepta original —oli d'oliva, sal gruixuda, massa fermentada— continua sent la base de tot.
 
-A Virutes, respectem aquesta tradició però l'adaptem: fem servir oli d'oliva verge extra de Catalunya, sal de l'Empordà i ingredients de proximitat. La nostra massa fermenta 48 hores per aconseguir aquella textura esponjosa i crosta daurada que ens defineix.
+A Alfajorina, respectem aquesta tradició però l'adaptem: fem servir oli d'oliva verge extra de Catalunya, sal de l'Empordà i ingredients de proximitat. La nostra massa fermenta 48 hores per aconseguir aquella textura esponjosa i crosta daurada que ens defineix.
 
 **La nostra tècnica:**
 - Massa mare viva, alimentada cada dia
@@ -65,9 +65,9 @@ Cada focaccia és única. Cada dia és diferent. Això és el que ens encanta.
     slug: "click-collect-disponible",
     title: "Click & Collect: ara pots fer la teva comanda per emportar",
     excerpt:
-      "Ja pots fer la teva comanda a Virutes des de casa i recollir-la quan vulguis. Sense cua, sense espera. L'artesà a la teva porta.",
+      "Ja pots fer la teva comanda a Alfajorina des de casa i recollir-la quan vulguis. Sense cua, sense espera. L'artesà a la teva porta.",
     content: `
-A partir d'avui, Virutes ofereix un servei de **Click & Collect**. Ara pots fer la teva comanda des de la web i recollir-la al local quan vulguis.
+  A partir d'avui, Alfajorina ofereix un servei de **Click & Collect**. Ara pots fer la teva comanda des de la web i recollir-la al local quan vulguis.
 
 **Com funciona:**
 1. Tria els productes a la nostra carta digital

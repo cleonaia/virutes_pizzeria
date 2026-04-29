@@ -32,37 +32,34 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://virutes.com"),
+  metadataBase: new URL("https://alfajorina.com"),
   title: {
-    default: "Virutes — Focacceria Artesanal Sabadell",
-    template: "%s | Virutes",
+    default: "Alfajorina — Alfajores y dulces",
+    template: "%s | Alfajorina",
   },
   description:
-    "Focacceria artesanal al cor de Sabadell. Focaccies, pinses i plats del dia fets amb massa mare i ingredients de proximitat.",
+    "Alfajorina es una pastelería artesanal con alfajores, tartas y dulces frescos hechos con amor.",
   keywords: [
-    "focacceria sabadell",
-    "focaccia artesanal",
-    "focaccia sabadell",
-    "pinsa sabadell",
-    "virutes",
-    "restaurant sabadell",
-    "pa artesà",
+    "alfajorina",
+    "pastelería artesanal",
+    "alfajores",
+    "tartas artesanales",
+    "dulces frescos",
+    "terrassa",
   ],
-  authors: { name: "Virutes Focacceria Artesanal" },
+  authors: { name: "Alfajorina" },
   openGraph: {
-    title: "Virutes — Focacceria Artesanal Sabadell",
-    description:
-      "Focaccia feta amb ànima. Artesanal, honest i de Sabadell.",
+    title: "Alfajorina — Alfajores y dulces",
+    description: "Dulces frescos, hechos con amor.",
     type: "website",
     locale: "ca_ES",
-    url: "https://virutes.com",
-    siteName: "Virutes",
+    url: "https://alfajorina.com",
+    siteName: "Alfajorina",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Virutes — Focacceria Artesanal Sabadell",
-    description:
-      "Focaccia feta amb ànima. Artesanal, honest i de Sabadell.",
+    title: "Alfajorina — Alfajores y dulces",
+    description: "Dulces frescos, hechos con amor.",
   },
 };
 
@@ -74,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="ca" suppressHydrationWarning>
       <body
-        className={`${dancingScript.variable} ${dmSans.variable} ${playfair.variable} font-sans bg-virutes-cream-light text-virutes-brown antialiased min-h-screen overflow-x-hidden`}
+        className={`${dancingScript.variable} ${dmSans.variable} ${playfair.variable} font-sans bg-alfe-cream-soft text-alfe-cacao antialiased min-h-screen overflow-x-hidden`}
       >
         <AuthProvider>
           <CartProvider>

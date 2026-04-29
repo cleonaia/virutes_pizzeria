@@ -9,17 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        virutes: {
-          red: "#C0392B",
-          "red-dark": "#8B1A1A",
-          "red-light": "#E74C3C",
-          cream: "#F5ECD7",
-          "cream-light": "#FDFAF4",
-          olive: "#4A5240",
-          brown: "#3E2723",
-          "brown-mid": "#6D4C41",
-          "brown-light": "#A1887F",
-          border: "#E8D5B7",
+        alfe: {
+          cream: "#FFF7EF",
+          "cream-soft": "#FFF0E2",
+          cacao: "#4A2A20",
+          "cacao-deep": "#2C1712",
+          caramel: "#C58A45",
+          dulce: "#E3C084",
+          rose: "#E9D1B6",
+          frambuesa: "#A8834A",
+          pistacho: "#90A86B",
+          canela: "#B7895A",
+          border: "#F0D9C8",
         },
       },
       fontFamily: {

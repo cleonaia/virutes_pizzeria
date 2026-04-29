@@ -1,4 +1,4 @@
-// ─── Virutes Menu Data ─────────────────────────────────────────────────────
+// ─── Alfajorina Menu Data ─────────────────────────────────────────────────────
 export type Allergen = "gluten" | "lactics" | "ous" | "peix" | "fruits-sec" | "soja";
 
 export interface MenuItem {

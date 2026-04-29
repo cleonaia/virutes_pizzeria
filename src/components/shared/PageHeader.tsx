@@ -29,11 +29,11 @@ export function PageHeader({
           priority
         />
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-virutes-red-dark via-virutes-red to-virutes-red-light" />
+        <div className="absolute inset-0 bg-gradient-to-br from-alfe-cacao-deep via-alfe-cacao to-alfe-caramel" />
       )}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-virutes-brown/80 via-virutes-brown/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-alfe-brown/80 via-alfe-brown/30 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">

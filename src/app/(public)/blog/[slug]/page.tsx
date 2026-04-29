@@ -26,9 +26,9 @@ export default function BlogArticlePage({ params }: BlogArticlePageProps) {
       {/* ── Hero ── */}
       <div className="relative mt-20 h-72 sm:h-96 overflow-hidden">
         <Image src={post.coverImage} alt={post.title} fill className="object-cover" priority sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-virutes-brown/85 via-virutes-brown/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-alfe-cacao/85 via-alfe-cacao/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 max-w-3xl mx-auto px-4 sm:px-6 pb-10">
-          <span className="inline-block bg-virutes-red text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+          <span className="inline-block bg-alfe-frambuesa text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
             {post.category}
           </span>
           <h1 className="font-serif font-bold text-3xl sm:text-5xl text-white leading-tight">{post.title}</h1>
@@ -46,42 +46,42 @@ export default function BlogArticlePage({ params }: BlogArticlePageProps) {
 
       {/* ── Content ── */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-virutes-brown/60 hover:text-virutes-red transition-colors mb-10">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-alfe-cacao/60 hover:text-alfe-frambuesa transition-colors mb-10">
           <ArrowLeft className="h-4 w-4" /> Tornar a Novetats
         </Link>
 
         <div
           className="prose prose-stone max-w-none
-            prose-headings:font-serif prose-headings:text-virutes-brown
-            prose-p:text-virutes-brown/75 prose-p:leading-relaxed
-            prose-strong:text-virutes-brown
-            prose-li:text-virutes-brown/75
-            prose-a:text-virutes-red prose-a:no-underline hover:prose-a:underline"
+            prose-headings:font-serif prose-headings:text-alfe-brown
+            prose-p:text-alfe-brown/75 prose-p:leading-relaxed
+            prose-strong:text-alfe-brown
+            prose-li:text-alfe-brown/75
+            prose-a:text-alfe-red prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
         />
 
         {/* Share strip */}
-        <div className="mt-14 pt-8 border-t border-virutes-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-virutes-brown/60">
+          <div className="mt-14 pt-8 border-t border-alfe-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-alfe-cacao/60">
             T&apos;ha agradat? Comparteix-ho!
           </p>
           <div className="flex gap-3">
             <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://virutes.com/blog/${post.slug}`)}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://alfajorina.com/blog/${post.slug}`)}`}
               target="_blank" rel="noreferrer"
-              className="text-xs px-4 py-2 rounded-full border border-virutes-border text-virutes-brown hover:border-virutes-red hover:text-virutes-red transition-colors"
+              className="text-xs px-4 py-2 rounded-full border border-alfe-border text-alfe-cacao hover:border-alfe-frambuesa hover:text-alfe-frambuesa transition-colors"
             >
               X / Twitter
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://virutes.com/blog/${post.slug}`)}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://alfajorina.com/blog/${post.slug}`)}`}
               target="_blank" rel="noreferrer"
-              className="text-xs px-4 py-2 rounded-full border border-virutes-border text-virutes-brown hover:border-virutes-red hover:text-virutes-red transition-colors"
+              className="text-xs px-4 py-2 rounded-full border border-alfe-border text-alfe-cacao hover:border-alfe-frambuesa hover:text-alfe-frambuesa transition-colors"
             >
               Facebook
             </a>
             <a
-              href={`https://wa.me/?text=${encodeURIComponent(post.title + ' — https://virutes.com/blog/' + post.slug)}`}
+              href={`https://wa.me/?text=${encodeURIComponent(post.title + ' — https://alfajorina.com/blog/' + post.slug)}`}
               target="_blank" rel="noreferrer"
               className="text-xs px-4 py-2 rounded-full bg-[#25D366] text-white hover:bg-[#20b858] transition-colors"
             >
@@ -98,14 +98,14 @@ export default function BlogArticlePage({ params }: BlogArticlePageProps) {
             <h2 className="section-title mb-8">Més articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {relatedPosts.map((rp) => (
-                <Link key={rp.id} href={`/blog/${rp.slug}`} className="group flex gap-5 bg-white rounded-2xl overflow-hidden shadow-sm border border-virutes-border hover:shadow-md transition-shadow p-4">
+                <Link key={rp.id} href={`/blog/${rp.slug}`} className="group flex gap-5 bg-white rounded-2xl overflow-hidden shadow-sm border border-alfe-border hover:shadow-md transition-shadow p-4">
                   <div className="relative w-28 h-24 shrink-0 rounded-xl overflow-hidden">
                     <Image src={rp.coverImage} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="112px" />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <span className="text-xs font-bold uppercase tracking-wider text-virutes-red mb-1">{rp.category}</span>
-                    <p className="font-semibold text-virutes-brown leading-snug group-hover:text-virutes-red transition-colors line-clamp-2">{rp.title}</p>
-                    <p className="text-xs text-virutes-brown/50 mt-1">{formatDate(rp.publishedAt)}</p>
+                    <span className="text-xs font-bold uppercase tracking-wider text-alfe-frambuesa mb-1">{rp.category}</span>
+                    <p className="font-semibold text-alfe-cacao leading-snug group-hover:text-alfe-frambuesa transition-colors line-clamp-2">{rp.title}</p>
+                    <p className="text-xs text-alfe-cacao/50 mt-1">{formatDate(rp.publishedAt)}</p>
                   </div>
                 </Link>
               ))}
