@@ -4,13 +4,13 @@ import { AlfajorinaFooter } from "@/components/alfajorina/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Alfajorina — Pastelería y dulces en Barcelona",
+    default: "Alfajorina — Alfajores y dulces en Barcelona",
     template: "%s | Alfajorina",
   },
   description:
     "Alfajorina es una pastelería artesanal con alfajores, tartas y dulces frescos hechos con amor y los mejores ingredientes.",
   openGraph: {
-    title: "Alfajorina — Pastelería y dulces en Barcelona",
+    title: "Alfajorina — Alfajores y dulces en Barcelona",
     description: "Dulces frescos, hechos con amor.",
     type: "website",
   },
