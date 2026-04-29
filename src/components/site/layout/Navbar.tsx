@@ -11,7 +11,8 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
-  if (pathname === "/" || pathname.startsWith("/alfajorina")) {
+  // Show navbar everywhere except Alfajorina-specific routes
+  if (pathname && pathname.startsWith("/alfajorina")) {
     return null;
   }
 
