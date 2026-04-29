@@ -14,14 +14,14 @@ export default function BlogPage() {
       <div className="relative mt-20 h-64 sm:h-80 flex items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=1920&q=80"
-          alt="Novetats de Alfajorina"
+          alt="Novetats d'Alfajorina"
           fill className="object-cover" priority sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-alfe-brown/80 via-alfe-brown/30 to-transparent" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
           <h1 className="font-display text-6xl sm:text-7xl text-white">Novetats</h1>
           <p className="font-serif italic text-white/75 text-lg mt-2">
-            Del forn a la paraula. Receptes, històries i actualitat de Alfajorina.
+            Del forn a la paraula. Receptes, històries i actualitat d'Alfajorina.
           </p>
         </div>
       </div>

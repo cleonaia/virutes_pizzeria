@@ -48,11 +48,11 @@ export default function AlfajorinaHomePage() {
             <p className="mt-4 max-w-xl text-base leading-relaxed text-white/72 sm:text-lg">{alfajorinaConfig.description}</p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link href="/alfajorina/pedidos" className="btn-alfe-primary px-8 py-4 text-sm">
+              <Link href="/pedidos" className="btn-alfe-primary px-8 py-4 text-sm">
                 <Gift className="h-4 w-4" />
                 Ver pedidos
               </Link>
-              <Link href="/alfajorina/menu" className="btn-alfe-ghost border-white/25 bg-white/10 px-8 py-4 text-sm text-white hover:bg-white/15">
+              <Link href="/menu" className="btn-alfe-ghost border-white/25 bg-white/10 px-8 py-4 text-sm text-white hover:bg-white/15">
                 Explorar tienda
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -104,7 +104,7 @@ export default function AlfajorinaHomePage() {
                 <div className="p-6">
                   <p className="text-[10px] font-black uppercase tracking-[0.35em] text-alfe-frambuesa">{item.note}</p>
                   <h3 className="mt-2 font-display text-3xl text-alfe-cacao">{item.label}</h3>
-                  <Link href="/alfajorina/menu" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-alfe-cacao transition-colors hover:text-alfe-frambuesa">
+                  <Link href="/menu" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-alfe-cacao transition-colors hover:text-alfe-frambuesa">
                     Ver en la tienda
                     <ArrowRight className="h-4 w-4" />
                   </Link>

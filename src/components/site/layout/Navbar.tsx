@@ -76,10 +76,10 @@ export function Navbar() {
             {/* Right side */}
             <div className="flex items-center gap-3">
               <Link
-                href="/reservas"
+                href="/pedidos"
                 className="hidden md:inline-flex btn-primary text-xs px-5 py-2.5"
               >
-                Reserva ara
+                Fer comanda
               </Link>
               <button
                 onClick={() => setMobileOpen(true)}
@@ -133,11 +133,11 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              href="/reservas"
+              href="/pedidos"
               onClick={() => setMobileOpen(false)}
               className="mt-4 btn-primary px-10 py-4 text-base"
             >
-              Reserva ara
+              Fer comanda
             </Link>
           </nav>
 

@@ -200,7 +200,7 @@ export default function ContactoPage() {
     <div>
       <PageHeader
         title="Contacte"
-        subtitle="Escriu-nos, truca'ns o vine a veure'ns al centre de Sabadell"
+        subtitle="Escriu-nos, truca'ns o vine a veure'ns al centre de Terrassa"
         backgroundImage="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80"
       />
 

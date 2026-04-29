@@ -41,6 +41,7 @@ export const hours = [
 export const navLinks = [
   { href: "/",           label: "Inici"    },
   { href: "/menu",       label: "Carta"    },
+  { href: "/pedidos",    label: "Pedidos"  },
   { href: "/qui-som",    label: "Qui som"  },
   { href: "/galeria",    label: "Galeria"  },
   { href: "/blog",       label: "Novetats" },
@@ -49,7 +50,7 @@ export const navLinks = [
 
 export const claims = [
   "Massa, temps i ànima.",
-  "La focacceria artesanal de Sabadell.",
+  "La pastisseria artesanal d'Alfajorina.",
   "El sabor que et farà tornar.",
 ];
 

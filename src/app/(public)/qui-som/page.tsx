@@ -29,8 +29,8 @@ const teamMembers = [
 const milestones = [
   { year: "2022", text: "Obrim les portes amb 5 taules i un forn. Poca gent sabia on érem." },
   { year: "2023", text: "Guanyem el premi al millor pa artesà del Vallès. Comencem a omplir-nos." },
-  { year: "2024", text: "Ampliem el local i obrim Click & Collect. Sabadell ja ens coneix." },
-  { year: "2026", text: "Avui som la focacceria de referència de la ciutat. Gràcies a vosaltres." },
+  { year: "2024", text: "Ampliem el local i obrim Click & Collect. Terrassa ja ens coneix." },
+  { year: "2026", text: "Avui som la pastisseria de referència de la ciutat. Gràcies a vosaltres." },
 ];
 
 export default function QuiSomPage() {
@@ -62,7 +62,7 @@ export default function QuiSomPage() {
       <section className="surface-light py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <span className="section-label">La nostra història</span>
-          <h2 className="section-title mt-3 mb-8">Nats a Sabadell, criats al forn</h2>
+          <h2 className="section-title mt-3 mb-8">Nascuts a Terrassa, criats al forn</h2>
           <div className="space-y-5 text-alfe-brown/75 leading-relaxed text-lg">
             <p>
               Alfajorina va néixer el 2022 d&apos;una obsessió: fer la millor focaccia de Catalunya. No hi hauria dreceres, no hi hauria ingredients industrials. Només massa mare viva, fermentació llarga i productes que coneixem per nom.

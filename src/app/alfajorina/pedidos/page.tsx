@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Minus, Plus, ShoppingBag, Sparkles, Trash2, Truck } from "lucide-react";
@@ -38,8 +37,10 @@ export default function AlfajorinaPedidosPage() {
     });
   }
 
+  const paymentLabel = paymentMethod === "card" ? "Tarjeta / Apple Pay" : paymentMethod === "cash" ? "Efectivo" : "Apple Pay";
+
   const checkoutText = encodeURIComponent(
-    `Hola Alfajorina, quiero hacer un pedido:\n${cartItems.map(({ product, quantity }) => `- ${quantity} x ${product.name}`).join("\n")}\n\nTotal estimado: ${formatCurrency(total, "es-ES")}\n\nNombre: ${customerName}\nTeléfono: ${customerPhone}\nHora de recogida: ${pickupTime}\nMétodo de pago: ${paymentMethod}\nNotas: ${notes}`
+    `Hola Alfajorina, quiero hacer un pedido:\n${cartItems.map(({ product, quantity }) => `- ${quantity} x ${product.name}`).join("\n")}\n\nTotal estimado: ${formatCurrency(total, "es-ES")}\n\nNombre: ${customerName}\nTeléfono: ${customerPhone}\nHora de recogida: ${pickupTime}\nMétodo de pago: ${paymentLabel}\nNotas: ${notes}`
   );
 
   return (

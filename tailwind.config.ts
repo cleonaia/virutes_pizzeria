@@ -9,18 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        virutes: {
-          red: "#A8834A",
-          "red-dark": "#2C1712",
-          "red-light": "#C58A45",
-          cream: "#FFF7EF",
-          "cream-light": "#FFF0E2",
-          olive: "#90A86B",
-          brown: "#4A2A20",
-          "brown-mid": "#B7895A",
-          "brown-light": "#E3C084",
-          border: "#F0D9C8",
-        },
         alfe: {
           cream: "#FFF7EF",
           "cream-soft": "#FFF0E2",
