@@ -73,13 +73,13 @@ function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center gap-4 rounded-[28px] border border-virutes-border bg-virutes-cream/40 px-6 py-16 text-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-virutes-olive/15">
-          <CheckCircle className="h-8 w-8 text-virutes-olive" />
+      <div className="flex flex-col items-center justify-center gap-4 rounded-[28px] border border-alfe-border bg-alfe-cream/40 px-6 py-16 text-center">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-alfe-olive/15">
+          <CheckCircle className="h-8 w-8 text-alfe-olive" />
         </div>
         <div>
-          <h3 className="font-display text-4xl text-virutes-brown">Missatge enviat</h3>
-          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-virutes-brown/65">
+          <h3 className="font-display text-4xl text-alfe-brown">Missatge enviat</h3>
+          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-alfe-brown/65">
             Gràcies per escriure'ns. Et contestarem tan aviat com puguem per correu o telèfon.
           </p>
         </div>
@@ -88,7 +88,7 @@ function ContactForm() {
             setForm(emptyForm);
             setSubmitted(false);
           }}
-          className="mt-2 text-xs font-bold uppercase tracking-[0.28em] text-virutes-red underline underline-offset-4"
+          className="mt-2 text-xs font-bold uppercase tracking-[0.28em] text-alfe-red underline underline-offset-4"
         >
           Enviar un altre missatge
         </button>
@@ -97,13 +97,13 @@ function ContactForm() {
   }
 
   const inputCls =
-    "w-full rounded-2xl border border-virutes-border bg-white px-4 py-3.5 text-sm text-virutes-brown placeholder:text-virutes-brown/35 focus:outline-none focus:border-virutes-red focus:ring-2 focus:ring-virutes-red/15 transition-all duration-150";
+    "w-full rounded-2xl border border-alfe-border bg-white px-4 py-3.5 text-sm text-alfe-brown placeholder:text-alfe-brown/35 focus:outline-none focus:border-alfe-red focus:ring-2 focus:ring-alfe-red/15 transition-all duration-150";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-virutes-brown/55">
+          <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-alfe-brown/55">
             Nom *
           </label>
           <input
@@ -116,7 +116,7 @@ function ContactForm() {
           />
         </div>
         <div>
-          <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-virutes-brown/55">
+          <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-alfe-brown/55">
             Telèfon
           </label>
           <input
@@ -131,7 +131,7 @@ function ContactForm() {
       </div>
 
       <div>
-        <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-virutes-brown/55">
+        <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-alfe-brown/55">
           Correu electrònic *
         </label>
         <input
@@ -146,7 +146,7 @@ function ContactForm() {
       </div>
 
       <div>
-        <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-virutes-brown/55">
+        <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-alfe-brown/55">
           Tema
         </label>
         <select name="subject" value={form.subject} onChange={handleChange} className={inputCls}>
@@ -160,7 +160,7 @@ function ContactForm() {
       </div>
 
       <div>
-        <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-virutes-brown/55">
+        <label className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-alfe-brown/55">
           Missatge *
         </label>
         <textarea
@@ -175,7 +175,7 @@ function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs leading-relaxed text-virutes-brown/45">
+        <p className="text-xs leading-relaxed text-alfe-brown/45">
           Si la consulta és urgent, millor trucar-nos directament al {contactInfo.phonePretty}.
         </p>
         <button
@@ -211,27 +211,27 @@ export default function ContactoPage() {
 
           <div className="mt-12 grid gap-4 lg:grid-cols-3">
             {contactReasons.map(({ icon: Icon, title, description }) => (
-              <article key={title} className="rounded-[28px] border border-virutes-border bg-white p-7 shadow-sm">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-virutes-red/10 text-virutes-red">
+              <article key={title} className="rounded-[28px] border border-alfe-border bg-white p-7 shadow-sm">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-alfe-red/10 text-alfe-red">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-virutes-brown">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-virutes-brown/65">{description}</p>
+                <h3 className="text-xl font-semibold text-alfe-brown">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-alfe-brown/65">{description}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-virutes-cream px-4 py-20 sm:px-6 lg:px-8">
+      <section className="bg-alfe-cream px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px]">
-            <div className="rounded-[32px] border border-virutes-border bg-white p-8 shadow-sm sm:p-10">
+            <div className="rounded-[32px] border border-alfe-border bg-white p-8 shadow-sm sm:p-10">
               <p className="section-label">Formulari directe</p>
-              <h2 className="mt-2 font-display text-5xl leading-none text-virutes-brown sm:text-6xl">
+              <h2 className="mt-2 font-display text-5xl leading-none text-alfe-brown sm:text-6xl">
                 Envia'ns un missatge
               </h2>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-virutes-brown/60">
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-alfe-brown/60">
                 Per reserves, encàrrecs especials, grups o qualsevol dubte. T'ho posem fàcil i clar.
               </p>
 
@@ -241,18 +241,18 @@ export default function ContactoPage() {
             </div>
 
             <aside className="space-y-5">
-              <div className="rounded-[28px] border border-virutes-border bg-white p-6 shadow-sm">
+              <div className="rounded-[28px] border border-alfe-border bg-white p-6 shadow-sm">
                 <div className="mb-4 flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-virutes-red" />
-                  <h3 className="text-lg font-semibold text-virutes-brown">Horaris</h3>
+                  <Clock className="h-5 w-5 text-alfe-red" />
+                  <h3 className="text-lg font-semibold text-alfe-brown">Horaris</h3>
                 </div>
                 <ul className="space-y-2.5">
                   {hours.map((entry) => (
                     <li key={entry.days} className="flex items-start justify-between gap-4 text-sm">
-                      <span className={`font-medium ${entry.closed ? "text-virutes-brown/45" : "text-virutes-brown/70"}`}>
+                      <span className={`font-medium ${entry.closed ? "text-alfe-brown/45" : "text-alfe-brown/70"}`}>
                         {entry.days}
                       </span>
-                      <span className={`text-right ${entry.closed ? "text-virutes-red/70" : "font-semibold text-virutes-brown"}`}>
+                      <span className={`text-right ${entry.closed ? "text-alfe-red/70" : "font-semibold text-alfe-brown"}`}>
                         {entry.time}
                       </span>
                     </li>
@@ -260,48 +260,48 @@ export default function ContactoPage() {
                 </ul>
               </div>
 
-              <div className="rounded-[28px] border border-virutes-border bg-white p-6 shadow-sm">
+              <div className="rounded-[28px] border border-alfe-border bg-white p-6 shadow-sm">
                 <div className="mb-4 flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-virutes-red" />
-                  <h3 className="text-lg font-semibold text-virutes-brown">Truca o escriu-nos</h3>
+                  <Phone className="h-5 w-5 text-alfe-red" />
+                  <h3 className="text-lg font-semibold text-alfe-brown">Truca o escriu-nos</h3>
                 </div>
                 <div className="space-y-4 text-sm">
-                  <a href={contactInfo.phoneHref} className="flex items-center justify-between rounded-2xl bg-virutes-cream px-4 py-3 transition-colors hover:bg-virutes-cream-light">
-                    <span className="text-virutes-brown/55">Telèfon</span>
-                    <span className="font-semibold text-virutes-brown">{contactInfo.phonePretty}</span>
+                  <a href={contactInfo.phoneHref} className="flex items-center justify-between rounded-2xl bg-alfe-cream px-4 py-3 transition-colors hover:bg-alfe-cream-light">
+                    <span className="text-alfe-brown/55">Telèfon</span>
+                    <span className="font-semibold text-alfe-brown">{contactInfo.phonePretty}</span>
                   </a>
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center justify-between rounded-2xl bg-virutes-cream px-4 py-3 transition-colors hover:bg-virutes-cream-light">
-                    <span className="flex items-center gap-2 text-virutes-brown/55">
-                      <Mail className="h-4 w-4 text-virutes-red" /> Correu
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center justify-between rounded-2xl bg-alfe-cream px-4 py-3 transition-colors hover:bg-alfe-cream-light">
+                    <span className="flex items-center gap-2 text-alfe-brown/55">
+                      <Mail className="h-4 w-4 text-alfe-red" /> Correu
                     </span>
-                    <span className="font-semibold text-virutes-brown">{contactInfo.email}</span>
+                    <span className="font-semibold text-alfe-brown">{contactInfo.email}</span>
                   </a>
                 </div>
               </div>
 
-              <div className="rounded-[28px] border border-virutes-border bg-white p-6 shadow-sm">
+              <div className="rounded-[28px] border border-alfe-border bg-white p-6 shadow-sm">
                 <div className="mb-4 flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-virutes-red" />
-                  <h3 className="text-lg font-semibold text-virutes-brown">On som</h3>
+                  <MapPin className="h-5 w-5 text-alfe-red" />
+                  <h3 className="text-lg font-semibold text-alfe-brown">On som</h3>
                 </div>
-                <p className="text-sm leading-relaxed text-virutes-brown/65">{siteConfig.address}</p>
+                <p className="text-sm leading-relaxed text-alfe-brown/65">{siteConfig.address}</p>
                 <Link
                   href={siteConfig.googleMapsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.26em] text-virutes-red hover:gap-2 transition-all duration-150"
+                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.26em] text-alfe-red hover:gap-2 transition-all duration-150"
                 >
                   Obrir Google Maps <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
 
-              <div className="rounded-[28px] bg-virutes-brown p-6 text-white shadow-sm">
+              <div className="rounded-[28px] bg-alfe-brown p-6 text-white shadow-sm">
                 <p className="text-[10px] font-black uppercase tracking-[0.34em] text-white/45">Reserva directa</p>
                 <h3 className="mt-3 text-2xl font-semibold leading-tight">Ja tens clar quan vols venir?</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65">
                   Si el que necessites és reservar taula o gestionar una recollida, és millor anar directament al formulari de reserves.
                 </p>
-                <Link href="/reservas" className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-virutes-brown transition-colors hover:bg-virutes-cream">
+                <Link href="/reservas" className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-alfe-brown transition-colors hover:bg-alfe-cream">
                   Anar a reserves <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -318,9 +318,9 @@ export default function ContactoPage() {
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
             {faqs.map((faq) => (
-              <article key={faq.question} className="rounded-[28px] border border-virutes-border bg-white p-7 shadow-sm">
-                <h3 className="text-lg font-semibold text-virutes-brown">{faq.question}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-virutes-brown/65">{faq.answer}</p>
+              <article key={faq.question} className="rounded-[28px] border border-alfe-border bg-white p-7 shadow-sm">
+                <h3 className="text-lg font-semibold text-alfe-brown">{faq.question}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-alfe-brown/65">{faq.answer}</p>
               </article>
             ))}
           </div>
@@ -336,7 +336,7 @@ export default function ContactoPage() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Localització Virutes Sabadell"
+          title="Localització Alfajorina Sabadell"
         />
       </section>
     </div>

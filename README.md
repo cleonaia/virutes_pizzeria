@@ -1,3 +1,3 @@
-# virutes_pizzeria
+# alfajorina_pizzeria
 
-Propuesta de web para el local de Virutes Focaccia, con herramientas digitales para extender el negocio y mejorar la rentabilidad.
+Propuesta de web per al local Alfajorina, amb eines digitals per estendre el negoci i millorar la rendibilitat.

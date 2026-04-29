@@ -32,7 +32,7 @@ export default function MenuPage() {
       />
 
       {/* ── Sticky filter bar ── */}
-      <div className="sticky top-20 z-30 bg-virutes-cream-light/95 backdrop-blur-md border-b border-virutes-border shadow-sm">
+      <div className="sticky top-20 z-30 bg-alfe-cream-light/95 backdrop-blur-md border-b border-alfe-border shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
             <div className="flex flex-wrap gap-2">
@@ -40,8 +40,8 @@ export default function MenuPage() {
                 onClick={() => setActiveCategory("all")}
                 className={`text-sm px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                   activeCategory === "all"
-                    ? "bg-virutes-red text-white shadow-sm"
-                    : "bg-white border border-virutes-border text-virutes-brown hover:border-virutes-red hover:text-virutes-red"
+                    ? "bg-alfe-frambuesa text-white shadow-sm"
+                    : "bg-white border border-alfe-border text-alfe-cacao hover:border-alfe-frambuesa hover:text-alfe-frambuesa"
                 }`}
               >
                 Tot
@@ -51,10 +51,10 @@ export default function MenuPage() {
                   key={id}
                   onClick={() => setActiveCategory(id)}
                   className={`text-sm px-4 py-2 rounded-full font-medium transition-all duration-200 ${
-                    activeCategory === id
-                      ? "bg-virutes-red text-white shadow-sm"
-                      : "bg-white border border-virutes-border text-virutes-brown hover:border-virutes-red hover:text-virutes-red"
-                  }`}
+                      activeCategory === id
+                        ? "bg-alfe-frambuesa text-white shadow-sm"
+                        : "bg-white border border-alfe-border text-alfe-cacao hover:border-alfe-frambuesa hover:text-alfe-frambuesa"
+                    }`}
                 >
                   {label}
                 </button>
@@ -63,21 +63,21 @@ export default function MenuPage() {
 
             <div className="flex gap-2 w-full sm:w-auto">
               <div className="relative flex-1 sm:w-52">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-virutes-brown/40" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-alfe-cacao/40" />
                 <input
                   type="text"
                   placeholder="Cercar..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-virutes-border rounded-full focus:outline-none focus:border-virutes-red text-virutes-brown placeholder-virutes-brown/40"
+                  className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-alfe-border rounded-full focus:outline-none focus:border-alfe-frambuesa text-alfe-cacao placeholder-alfe-cacao/40"
                 />
               </div>
               <button
                 onClick={() => setShowAllergens((v) => !v)}
                 className={`flex items-center gap-1.5 text-xs px-3 py-2 rounded-full border transition-colors ${
                   showAllergens
-                    ? "bg-virutes-red border-virutes-red text-white"
-                    : "bg-white border-virutes-border text-virutes-brown hover:border-virutes-red"
+                    ? "bg-alfe-frambuesa border-alfe-frambuesa text-white"
+                    : "bg-white border-alfe-border text-alfe-cacao hover:border-alfe-frambuesa"
                 }`}
               >
                 <SlidersHorizontal className="h-3.5 w-3.5" />
@@ -91,9 +91,9 @@ export default function MenuPage() {
       {/* ── Product grid ── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         {filtered.length === 0 ? (
-          <div className="text-center py-20">
+            <div className="text-center py-20">
             <p className="text-4xl mb-4">🔍</p>
-            <p className="text-virutes-brown/60 text-lg">No hem trobat res per a &ldquo;{search}&rdquo;</p>
+            <p className="text-alfe-cacao/60 text-lg">No hem trobat res per a &ldquo;{search}&rdquo;</p>
             <button
               onClick={() => { setSearch(""); setActiveCategory("all"); }}
               className="mt-4 btn-primary"
@@ -104,7 +104,7 @@ export default function MenuPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((item) => (
-              <article key={item.id} className="card-product">
+          <article key={item.id} className="card-product border border-alfe-border">
                 <div className="relative h-52 overflow-hidden">
                   <Image
                     src={item.image}
@@ -114,17 +114,17 @@ export default function MenuPage() {
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   />
                   {item.badge && (
-                    <span className="absolute top-3 left-3 text-xs font-bold uppercase tracking-wider bg-virutes-red text-white px-3 py-1 rounded-full z-10">
+                    <span className="absolute top-3 left-3 text-xs font-bold uppercase tracking-wider bg-alfe-red text-white px-3 py-1 rounded-full z-10">
                       {item.badge}
                     </span>
                   )}
                   {item.vegan && (
-                    <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-xs bg-virutes-olive text-white px-2.5 py-1 rounded-full z-10">
+                    <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-xs bg-alfe-olive text-white px-2.5 py-1 rounded-full z-10">
                       <Leaf className="h-3 w-3" /> Vegà
                     </span>
                   )}
                   {!item.vegan && item.vegetarian && (
-                    <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-xs bg-virutes-olive/80 text-white px-2.5 py-1 rounded-full z-10">
+                    <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-xs bg-alfe-olive/80 text-white px-2.5 py-1 rounded-full z-10">
                       <Leaf className="h-3 w-3" /> Vegetarià
                     </span>
                   )}
@@ -132,20 +132,20 @@ export default function MenuPage() {
 
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-semibold text-virutes-brown leading-snug">{item.name}</h3>
-                    <span className="font-bold text-virutes-red shrink-0 tabular-nums text-lg">
+                    <h3 className="font-semibold text-alfe-brown leading-snug">{item.name}</h3>
+                    <span className="font-bold text-alfe-red shrink-0 tabular-nums text-lg">
                       {formatCurrency(item.price)}
                     </span>
                   </div>
-                  <p className="text-sm text-virutes-brown/65 leading-relaxed mb-4">
+                  <p className="text-sm text-alfe-brown/65 leading-relaxed mb-4">
                     {item.description}
                   </p>
                   {showAllergens && item.allergens.length > 0 && (
-                    <div className="border-t border-virutes-border pt-3">
-                      <p className="text-xs text-virutes-brown/50 mb-1.5 font-medium uppercase tracking-wider">Al·lèrgens:</p>
+                    <div className="border-t border-alfe-border pt-3">
+                      <p className="text-xs text-alfe-brown/50 mb-1.5 font-medium uppercase tracking-wider">Al·lèrgens:</p>
                       <div className="flex flex-wrap gap-1.5">
                         {item.allergens.map((a) => (
-                          <span key={a} className="text-xs bg-virutes-cream border border-virutes-border text-virutes-brown/70 px-2 py-0.5 rounded-full">
+                          <span key={a} className="text-xs bg-alfe-cream border border-alfe-border text-alfe-brown/70 px-2 py-0.5 rounded-full">
                             {allergenLabels[a]}
                           </span>
                         ))}
@@ -158,8 +158,8 @@ export default function MenuPage() {
           </div>
         )}
 
-        <div className="mt-16 bg-virutes-cream rounded-2xl p-6 text-sm text-virutes-brown/65 leading-relaxed">
-          <p className="font-semibold text-virutes-brown mb-2 flex items-center gap-2"><Info className="h-4 w-4 text-virutes-brown/50" /> Informació sobre al·lèrgens</p>
+        <div className="mt-16 bg-alfe-cream rounded-2xl p-6 text-sm text-alfe-brown/65 leading-relaxed">
+          <p className="font-semibold text-alfe-brown mb-2 flex items-center gap-2"><Info className="h-4 w-4 text-alfe-brown/50" /> Informació sobre al·lèrgens</p>
           <p>
             Si tens alguna al·lèrgia o intolerància alimentària, si us plau informa&apos;ns en fer la reserva o en arribar al local.
             Els nostres plats es preparen en entorns on es manipulen tots els al·lèrgens principals.

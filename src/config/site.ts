@@ -1,31 +1,31 @@
-// ─── Virutes Brand Data ────────────────────────────────────────────────────
+// ─── Alfajorina Brand Data ────────────────────────────────────────────────────
 export const siteConfig = {
-  name: "Virutes",
-  tagline: "Focacceria Artesanal",
-  slogan: "Massa, temps i ànima.",
-  sloganSub: "La focacceria artesanal de Sabadell.",
-  city: "Sabadell",
+  name: "Alfajorina",
+  tagline: "Pastelería y dulces",
+  slogan: "Hechos con amor.",
+  sloganSub: "Postres frescos, delicados y muy irresistibles.",
+  city: "Terrassa",
   description:
-    "Focacceria artesanal al cor de Sabadell. Massa mare de 48 hores, ingredients de proximitat i molt de caràcter.",
-  address: "Via de Massagué, 31, 08201 Sabadell, Barcelona",
-  addressShort: "Via de Massagué, 31 · Sabadell",
+    "Aquí encontrarás los postres más deliciosos y frescos, hechos con amor y los mejores ingredientes.",
+  address: "Passeig 22 de Juliol 155, local 3, Terrassa",
+  addressShort: "Passeig 22 de Juliol 155, local 3 · Terrassa",
   googleMapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Via+de+Massagué+31+08201+Sabadell+Barcelona",
+    "https://www.google.com/maps/search/?api=1&query=Passeig+22+de+Juliol+155+Terrassa",
   googleMapsEmbed:
-    "https://maps.google.com/maps?q=Via+de+Massagué+31+Sabadell&t=&z=17&ie=UTF8&iwloc=&output=embed",
+    "https://maps.google.com/maps?q=Passeig+22+de+Juliol+155+Terrassa&t=&z=17&ie=UTF8&iwloc=&output=embed",
 };
 
 export const contactInfo = {
-  phone: "933 34 55 91",
-  phonePretty: "933 34 55 91",
-  phoneHref: "tel:+34933345591",
-  email: "hola@virutes.com",
-  whatsappNumber: "34933345591",
+  phone: "+34 600 123 456",
+  phonePretty: "+34 600 123 456",
+  phoneHref: "tel:+34600123456",
+  email: "hola@alfajorina.com",
+  whatsappNumber: "34600123456",
 };
 
 export const socialLinks = {
-  instagram: "https://www.instagram.com/virutes.sbd/",
-  tiktok: "https://www.tiktok.com/@virutes.sbd",
+  instagram: "https://www.instagram.com/alfajorina/",
+  tiktok: "https://www.tiktok.com/@alfajorina",
   whatsapp: `https://wa.me/${contactInfo.whatsappNumber}`,
   phone: contactInfo.phone,
   email: contactInfo.email,

@@ -4,12 +4,24 @@
 
 /* ─── Root design tokens ─── */
 :root {
-  --virutes-red: #c0392b;
-  --virutes-red-dark: #8b1a1a;
-  --virutes-cream: #f5ecd7;
-  --virutes-cream-light: #fdfaf4;
-  --virutes-olive: #4a5240;
-  --virutes-brown: #3e2723;
+  --alfe-cream: #FFF7EF;
+  --alfe-cream-soft: #FFF0E2;
+  --alfe-cacao: #4A2A20;
+  --alfe-cacao-deep: #2C1712;
+  --alfe-caramel: #C58A45;
+  --alfe-dulce: #E3C084;
+  --alfe-frambuesa: #A8834A;
+  --alfe-pistacho: #90A86B;
+  --alfe-canela: #B7895A;
+  --alfe-border: #F0D9C8;
+
+  /* Legacy aliases so existing alfajorina classes keep working */
+  --alfe-red: #A8834A;
+  --alfe-red-dark: #2C1712;
+  --alfe-cream: #FFF7EF;
+  --alfe-cream-light: #FFF0E2;
+  --alfe-olive: #90A86B;
+  --alfe-brown: #4A2A20;
 }
 
 /* ─── Base resets ─── */
@@ -58,7 +70,23 @@ body::after {
 /* ─── Reusable component classes ─── */
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-virutes-red text-white text-sm font-semibold rounded-full hover:bg-virutes-red-dark active:scale-95 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-alfe-frambuesa text-white text-sm font-semibold rounded-full hover:bg-alfe-cacao active:scale-95 transition-all duration-200 shadow-sm shadow-alfe-frambuesa/20;
+  }
+
+  .btn-alfe-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-alfe-caramel text-white text-sm font-semibold rounded-full hover:bg-alfe-cacao active:scale-95 transition-all duration-200 shadow-lg shadow-alfe-caramel/20;
+  }
+
+  .btn-alfe-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-alfe-border text-alfe-cacao text-sm font-semibold rounded-full hover:bg-white active:scale-95 transition-all duration-200;
+  }
+
+  .alfe-surface {
+    @apply bg-alfe-cream;
+  }
+
+  .alfe-card {
+    @apply rounded-[28px] border border-alfe-border bg-white shadow-sm;
   }
 
   .btn-ghost {
@@ -70,15 +98,15 @@ body::after {
   }
 
   .section-label {
-    @apply text-xs font-bold uppercase tracking-[0.35em] text-virutes-red;
+    @apply text-xs font-bold uppercase tracking-[0.35em] text-alfe-frambuesa;
   }
 
   .section-title {
-    @apply font-serif text-3xl sm:text-4xl lg:text-5xl text-virutes-brown leading-tight;
+    @apply font-serif text-3xl sm:text-4xl lg:text-5xl text-alfe-cacao leading-tight;
   }
 
   .section-title-display {
-    @apply font-display text-4xl sm:text-5xl lg:text-6xl text-virutes-red leading-tight;
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl text-alfe-frambuesa leading-tight;
   }
 
   .card-product {
@@ -86,12 +114,26 @@ body::after {
   }
 
   .surface-cream {
-    @apply bg-virutes-cream;
+    @apply bg-alfe-cream;
   }
 
   .surface-light {
-    @apply bg-virutes-cream-light;
+    @apply bg-alfe-cream-soft;
   }
+}
+
+.alfe-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d8a15d, #d97c76, #d8a15d, transparent);
+}
+
+.alfe-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(77, 42, 32, 0.08) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+.alfe-glow {
+  box-shadow: 0 30px 80px rgba(196, 122, 61, 0.18);
 }
 
 /* ─── Ingredient illustration decorators (SVG clip paths) ─── */
@@ -126,7 +168,7 @@ body::after {
   display: inline-block;
   height: 1px;
   width: 40px;
-  background: #c0392b;
+  background: #A8834A;
   vertical-align: middle;
   margin: 0 12px;
 }

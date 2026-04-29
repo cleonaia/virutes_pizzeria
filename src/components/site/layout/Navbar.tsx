@@ -10,6 +10,11 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+
+  if (pathname === "/" || pathname.startsWith("/alfajorina")) {
+    return null;
+  }
+
   const isHome = pathname === "/";
 
   useEffect(() => {
@@ -25,11 +30,11 @@ export function Navbar() {
   }, [mobileOpen]);
 
   const navBg = scrolled || !isHome
-    ? "bg-virutes-cream-light/95 backdrop-blur-md shadow-sm border-b border-virutes-border"
+    ? "bg-alfe-cream/95 backdrop-blur-md shadow-sm border-b border-alfe-border"
     : "bg-transparent";
 
-  const textColor = scrolled || !isHome ? "text-virutes-brown" : "text-white";
-  const logoColor = scrolled || !isHome ? "text-virutes-red" : "text-white";
+  const textColor = scrolled || !isHome ? "text-alfe-cacao" : "text-white";
+  const logoColor = scrolled || !isHome ? "text-alfe-frambuesa" : "text-white";
 
   return (
     <>
@@ -40,12 +45,12 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link
-              href="/"
-              className={`font-display text-3xl transition-colors duration-300 hover:opacity-80 ${logoColor}`}
-            >
-              Virutes
-            </Link>
+              <Link
+                href="/"
+                className={`font-display text-3xl transition-colors duration-300 hover:opacity-80 ${logoColor}`}
+              >
+                Alfajorina
+              </Link>
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-7">
@@ -56,9 +61,9 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={`relative text-sm font-medium tracking-wide transition-colors duration-200
-                      after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-virutes-red
+                      after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-alfe-frambuesa
                       after:transition-all after:duration-300
-                      ${active ? "after:w-full text-virutes-red" : `after:w-0 hover:after:w-full ${textColor} hover:text-virutes-red`}
+                      ${active ? "after:w-full text-alfe-frambuesa" : `after:w-0 hover:after:w-full ${textColor} hover:text-alfe-frambuesa`}
                     `}
                   >
                     {link.label}
@@ -93,18 +98,18 @@ export function Navbar() {
           ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
       >
-        <div className="absolute inset-0 bg-virutes-cream-light" />
+        <div className="absolute inset-0 bg-alfe-cream-light" />
         {/* Decorative circles */}
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-virutes-cream opacity-60 -translate-y-1/3 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-virutes-cream opacity-60 translate-y-1/3 -translate-x-1/3" />
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-alfe-cream opacity-60 -translate-y-1/3 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-alfe-cream opacity-60 translate-y-1/3 -translate-x-1/3" />
 
         <div className="relative flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between px-6 pt-7 pb-4">
-            <span className="font-display text-3xl text-virutes-red">Virutes</span>
+            <span className="font-display text-3xl text-alfe-frambuesa">Alfajorina</span>
             <button
               onClick={() => setMobileOpen(false)}
-              className="p-2 text-virutes-brown hover:text-virutes-red transition-colors"
+              className="p-2 text-alfe-cacao hover:text-alfe-frambuesa transition-colors"
               aria-label="Tancar menú"
             >
               <X className="h-7 w-7" />
@@ -119,7 +124,7 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 style={{ animationDelay: mobileOpen ? `${i * 60}ms` : "0ms" }}
-                className={`font-serif italic text-4xl text-virutes-brown hover:text-virutes-red transition-colors
+                className={`font-serif italic text-4xl text-alfe-cacao hover:text-alfe-frambuesa transition-colors
                   ${mobileOpen ? "animate-fade-up" : ""}
                 `}
               >
@@ -136,8 +141,8 @@ export function Navbar() {
           </nav>
 
           {/* Footer */}
-          <p className="text-center text-xs text-virutes-brown/40 pb-8">
-            Focacceria Artesanal · Sabadell
+          <p className="text-center text-xs text-alfe-cacao/40 pb-8">
+            Pastelería · Terrassa
           </p>
         </div>
       </div>

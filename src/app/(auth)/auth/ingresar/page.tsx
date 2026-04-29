@@ -11,7 +11,7 @@ export default function IngressarPage() {
   const [loading, setLoading] = useState(false);
 
   const inputCls =
-    "w-full rounded-xl border border-virutes-border bg-white/60 px-4 py-3 text-sm text-virutes-brown placeholder:text-virutes-brown/40 focus:outline-none focus:ring-2 focus:ring-virutes-red/30 transition";
+    "w-full rounded-xl border border-alfe-border bg-white/60 px-4 py-3 text-sm text-alfe-cacao placeholder:text-alfe-cacao/40 focus:outline-none focus:ring-2 focus:ring-alfe-frambuesa/30 transition";
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -23,24 +23,24 @@ export default function IngressarPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-virutes-cream-light px-4 py-24">
+    <div className="flex min-h-screen items-center justify-center bg-alfe-cream-soft px-4 py-24">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="mb-8 text-center">
-          <Link href="/" className="font-display text-4xl text-virutes-red">Virutes</Link>
-          <p className="mt-1 text-sm text-virutes-brown/60">Focacceria Artesanal · Sabadell</p>
+          <Link href="/" className="font-display text-4xl text-alfe-frambuesa">Alfajorina</Link>
+          <p className="mt-1 text-sm text-alfe-cacao/60">Pastelería · Terrassa</p>
         </div>
 
-        <div className="rounded-3xl border border-virutes-border bg-white p-8 shadow-sm">
-          <h1 className="mb-6 font-serif text-2xl italic text-virutes-brown">Accedeix al teu compte</h1>
+        <div className="rounded-3xl border border-alfe-border bg-white p-8 shadow-sm">
+          <h1 className="mb-6 font-serif text-2xl italic text-alfe-cacao">Accedeix al teu compte</h1>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-virutes-brown/60">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-alfe-brown/60">
                 Correu electrònic
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-virutes-brown/30" />
+                <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-alfe-cacao/30" />
                 <input
                   type="email" required
                   value={email} onChange={(e) => setEmail(e.target.value)}
@@ -51,11 +51,11 @@ export default function IngressarPage() {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-virutes-brown/60">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-alfe-brown/60">
                 Contrasenya
               </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-virutes-brown/30" />
+                <Lock className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-alfe-cacao/30" />
                 <input
                   type={showPwd ? "text" : "password"} required
                   value={password} onChange={(e) => setPassword(e.target.value)}
@@ -65,7 +65,7 @@ export default function IngressarPage() {
                 <button
                   type="button"
                   onClick={() => setShowPwd((p) => !p)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-virutes-brown/30 hover:text-virutes-brown"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-alfe-cacao/30 hover:text-alfe-cacao"
                 >
                   {showPwd ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
@@ -83,9 +83,9 @@ export default function IngressarPage() {
             </button>
           </form>
 
-          <p className="mt-6 text-center text-xs text-virutes-brown/50">
+          <p className="mt-6 text-center text-xs text-alfe-cacao/50">
             No tens compte?{" "}
-            <Link href="/cliente/registro" className="font-semibold text-virutes-red hover:underline">
+            <Link href="/cliente/registro" className="font-semibold text-alfe-frambuesa hover:underline">
               Registra't
             </Link>
           </p>

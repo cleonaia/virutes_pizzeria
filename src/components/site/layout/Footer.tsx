@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { hours, socialLinks, siteConfig, contactInfo, navLinks } from "@/config/site";
 
@@ -20,19 +23,25 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/" || pathname.startsWith("/alfajorina")) {
+    return null;
+  }
+
   return (
-    <footer className="bg-virutes-cream border-t border-virutes-border">
+    <footer className="bg-alfe-cream border-t border-alfe-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand block */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="font-display text-4xl text-virutes-red hover:opacity-80 transition-opacity">
-              Virutes
+               <Link href="/" className="font-display text-4xl text-alfe-frambuesa hover:opacity-80 transition-opacity">
+              Alfajorina
             </Link>
-            <p className="mt-1.5 text-base text-virutes-brown-mid font-serif italic">
+            <p className="mt-1.5 text-base text-alfe-cacao font-serif italic">
               {siteConfig.tagline} · {siteConfig.city}
             </p>
-            <p className="mt-4 text-base text-virutes-brown/70 max-w-[240px] leading-relaxed">
+            <p className="mt-4 text-base text-alfe-cacao/70 max-w-[240px] leading-relaxed">
               {siteConfig.description}
             </p>
 
@@ -42,7 +51,7 @@ export function Footer() {
                 href={socialLinks.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-virutes-brown/10 flex items-center justify-center text-virutes-brown/60 hover:bg-virutes-red hover:text-white transition-all duration-200"
+                className="w-9 h-9 rounded-full bg-alfe-cacao/10 flex items-center justify-center text-alfe-cacao/60 hover:bg-alfe-frambuesa hover:text-white transition-all duration-200"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -51,7 +60,7 @@ export function Footer() {
                 href={socialLinks.tiktok}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-virutes-brown/10 flex items-center justify-center text-virutes-brown/60 hover:bg-virutes-brown hover:text-white transition-all duration-200"
+                className="w-9 h-9 rounded-full bg-alfe-cacao/10 flex items-center justify-center text-alfe-cacao/60 hover:bg-alfe-cacao hover:text-white transition-all duration-200"
                 aria-label="TikTok"
               >
                 <TikTokIcon className="h-4 w-4" />
@@ -60,7 +69,7 @@ export function Footer() {
                 href={socialLinks.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-virutes-brown/10 flex items-center justify-center text-virutes-brown/60 hover:bg-[#25D366] hover:text-white transition-all duration-200"
+                className="w-9 h-9 rounded-full bg-alfe-cacao/10 flex items-center justify-center text-alfe-cacao/60 hover:bg-[#25D366] hover:text-white transition-all duration-200"
                 aria-label="WhatsApp"
               >
                 <WhatsAppIcon className="h-4 w-4" />
@@ -76,14 +85,14 @@ export function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-base text-virutes-brown/70 hover:text-virutes-red transition-colors"
+                    className="text-base text-alfe-cacao/70 hover:text-alfe-frambuesa transition-colors"
                   >
                     {label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/reservas" className="text-base text-virutes-brown/70 hover:text-virutes-red transition-colors">
+                <Link href="/reservas" className="text-base text-alfe-brown/70 hover:text-alfe-red transition-colors">
                   Reserves
                 </Link>
               </li>
@@ -96,10 +105,10 @@ export function Footer() {
             <ul className="space-y-2">
               {hours.map(({ days, time, closed }) => (
                 <li key={days} className="flex flex-col text-base leading-snug">
-                  <span className={`font-medium ${closed ? "text-virutes-red" : "text-virutes-brown"}`}>
+                  <span className={`font-medium ${closed ? "text-alfe-frambuesa" : "text-alfe-cacao"}`}>
                     {days}
                   </span>
-                  <span className={closed ? "text-virutes-red/70" : "text-virutes-brown/60"}>
+                  <span className={closed ? "text-alfe-frambuesa/70" : "text-alfe-cacao/60"}>
                     {time}
                   </span>
                 </li>
@@ -111,33 +120,33 @@ export function Footer() {
           <div>
             <h4 className="section-label mb-5">Contacte</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-base text-virutes-brown/70">
-                <MapPin className="h-4 w-4 mt-0.5 text-virutes-red shrink-0" />
+              <li className="flex items-start gap-3 text-base text-alfe-cacao/70">
+                  <MapPin className="h-4 w-4 mt-0.5 text-alfe-frambuesa shrink-0" />
                 <span>{siteConfig.address}</span>
               </li>
-              <li className="flex items-center gap-3 text-base text-virutes-brown/70">
-                <Phone className="h-4 w-4 text-virutes-red shrink-0" />
-                <a href={contactInfo.phoneHref} className="hover:text-virutes-red transition-colors">
+                <li className="flex items-center gap-3 text-base text-alfe-cacao/70">
+                  <Phone className="h-4 w-4 text-alfe-frambuesa shrink-0" />
+                   <a href={contactInfo.phoneHref} className="hover:text-alfe-frambuesa transition-colors">
                   {contactInfo.phonePretty}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-base text-virutes-brown/70">
-                <Mail className="h-4 w-4 text-virutes-red shrink-0" />
-                <a href={`mailto:${socialLinks.email}`} className="hover:text-virutes-red transition-colors">
-                  {socialLinks.email}
-                </a>
-              </li>
+                <li className="flex items-center gap-3 text-base text-alfe-cacao/70">
+                  <Mail className="h-4 w-4 text-alfe-frambuesa shrink-0" />
+                  <a href={`mailto:${socialLinks.email}`} className="hover:text-alfe-frambuesa transition-colors">
+                    {socialLinks.email}
+                  </a>
+                </li>
             </ul>
           </div>
         </div>
 
         {/* ── QR codes strip ── */}
-        <div className="mt-12 pt-10 border-t border-virutes-border">
+        <div className="mt-12 pt-10 border-t border-alfe-border">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
             <div className="flex items-center gap-5">
-              <div className="p-2 bg-white rounded-xl border border-virutes-border shadow-sm">
+              <div className="p-2 bg-white rounded-xl border border-alfe-border shadow-sm">
                 <Image
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https%3A%2F%2Fvirutes.com%2Fmenu&color=3E2723&bgcolor=F5ECD7&qzone=1"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https%3A%2F%2Falfajorina.com%2Fmenu&color=3E2723&bgcolor=F5ECD7&qzone=1"
                   alt="QR La Carta"
                   width={80}
                   height={80}
@@ -146,16 +155,16 @@ export function Footer() {
                 />
               </div>
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.35em] text-virutes-brown/40 mb-0.5">Escaneja per veure</p>
-                <p className="font-serif italic text-virutes-brown text-lg leading-none">La Carta</p>
-                <p className="text-xs text-virutes-brown/50 mt-1">virutes.com/menu</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.35em] text-alfe-cacao/40 mb-0.5">Escaneja per veure</p>
+                <p className="font-serif italic text-alfe-cacao text-lg leading-none">La Carta</p>
+                <p className="text-xs text-alfe-cacao/50 mt-1">alfajorina.com/menu</p>
               </div>
             </div>
-            <div className="h-12 w-px bg-virutes-border hidden sm:block" />
+            <div className="h-12 w-px bg-alfe-border hidden sm:block" />
             <div className="flex items-center gap-5">
-              <div className="p-2 bg-white rounded-xl border border-virutes-border shadow-sm">
+              <div className="p-2 bg-white rounded-xl border border-alfe-border shadow-sm">
                 <Image
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https%3A%2F%2Fvirutes.com%2Freserves&color=C0392B&bgcolor=FDFAF4&qzone=1"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https%3A%2F%2Falfajorina.com%2Freserves&color=C0392B&bgcolor=FDFAF4&qzone=1"
                   alt="QR Reserves"
                   width={80}
                   height={80}
@@ -164,23 +173,23 @@ export function Footer() {
                 />
               </div>
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.35em] text-virutes-brown/40 mb-0.5">Escaneja per</p>
-                <p className="font-serif italic text-virutes-brown text-lg leading-none">Reservar taula</p>
-                <p className="text-xs text-virutes-brown/50 mt-1">virutes.com/reserves</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.35em] text-alfe-cacao/40 mb-0.5">Escaneja per</p>
+                <p className="font-serif italic text-alfe-cacao text-lg leading-none">Reservar taula</p>
+                <p className="text-xs text-alfe-cacao/50 mt-1">alfajorina.com/reserves</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-virutes-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-virutes-brown/40 text-center sm:text-left">
-            © 2026 Virutes Focacceria Artesanal. Tots els drets reservats.
+        <div className="mt-10 pt-6 border-t border-alfe-border flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-alfe-cacao/40 text-center sm:text-left">
+            © 2026 Alfajorina. Tots els drets reservats.
           </p>
-          <div className="flex items-center gap-6 text-xs text-virutes-brown/40">
-            <Link href="/privacitat"   className="hover:text-virutes-red transition-colors">Política de privacitat</Link>
-            <Link href="/cookies"      className="hover:text-virutes-red transition-colors">Cookies</Link>
-            <Link href="/avis-legal"   className="hover:text-virutes-red transition-colors">Avís legal</Link>
+          <div className="flex items-center gap-6 text-xs text-alfe-cacao/40">
+            <Link href="/privacitat"   className="hover:text-alfe-frambuesa transition-colors">Política de privacitat</Link>
+            <Link href="/cookies"      className="hover:text-alfe-frambuesa transition-colors">Cookies</Link>
+            <Link href="/avis-legal"   className="hover:text-alfe-frambuesa transition-colors">Avís legal</Link>
           </div>
         </div>
       </div>

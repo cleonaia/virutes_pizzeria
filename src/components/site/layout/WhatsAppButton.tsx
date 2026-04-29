@@ -1,15 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { socialLinks } from "@/config/site";
 
 export function WhatsAppButton() {
+  const pathname = usePathname();
+
+  if (pathname === "/" || pathname.startsWith("/alfajorina")) return null;
+
   return (
     <Link
       href={socialLinks.whatsapp}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-virutes-red rounded-full flex items-center justify-center shadow-lg shadow-virutes-red/30 hover:bg-virutes-red/85 hover:scale-110 active:scale-95 transition-all duration-200"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-alfe-frambuesa rounded-full flex items-center justify-center shadow-lg shadow-alfe-frambuesa/30 hover:bg-alfe-frambuesa/90 hover:scale-110 active:scale-95 transition-all duration-200"
       aria-label="Contacta'ns per WhatsApp"
     >
       {/* Official WhatsApp logo mark */}
